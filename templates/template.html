@@ -5,12 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products in Stock</title>
+    <style>
+        body {
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
     <div>
-        <div>
-            <input type="search" name="Search..." id="searchbar">
-            <input type="checkbox" name="show_product" id="show_product"> <span> Only show products in stock</span>
+        <div class="searchBar">
+            
+            <input type="text" placeholder="Search...">
+            <p>
+                <input type="checkbox" name="show_product" id="show_product">
+                <span> Only show products in stock</span>
+            </p>
         </div>
         <div>
             <table>
@@ -19,7 +28,7 @@
                     <th>Price</th>
                 </tr>
                 <tr>
-                    <td>Sporting Goods</td>
+                    <td style="font-weight: bold;">Sporting Goods</td>
                 </tr>
                 <tr>
                     <td>Football</td>
@@ -30,18 +39,18 @@
                     <td>$9.99</td>
                 </tr>
                 <tr>
-                    <td>Basketball</td>
+                    <td style="color: red">Basketball</td>
                     <td>$29.99</td>
                 </tr>
                 <tr>
-                    <td>Electronics</td>
+                    <td style="font-weight: bold;">Electronics</td>
                 </tr>
                 <tr>
                     <td>iPod Touch</td>
                     <td>$99.99</td>
                 </tr>
                 <tr>
-                    <td>iPhone 5</td>
+                    <td style="color: red">iPhone 5</td>
                     <td>$399.99</td>
                 </tr>
                 <tr>
