@@ -1,4 +1,4 @@
-import ProductRecord from './ProductsTable';
+import ProductRecord from './ProductRecord';
 import ProductCategoryRow from './ProductCategoryRow';
 
 const ProductsTable = () => {
@@ -9,8 +9,12 @@ const ProductsTable = () => {
                 <th>Name</th>
                 <th>Price</th>
             </tr>  
-            {/* {<ProductCategoryRow />}
-            {<ProductRecord />} */}
+            <>
+                <ProductCategoryRow />
+            </>
+            <>
+                <ProductRecord />
+            </>
         </table>
     )
 
