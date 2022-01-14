@@ -9,9 +9,7 @@ const ProductsTable = () => {
                 <th>Name</th>
                 <th>Price</th>
             </tr>  
-            <>
-                <ProductCategoryRow />
-            </>
+            <ProductCategoryRow text ={'Rewind'} />
             <>
                 <ProductRecord />
             </>
