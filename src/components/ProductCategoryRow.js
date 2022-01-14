@@ -1,8 +1,8 @@
-const ProductCategoryRow = () => {
+const ProductCategoryRow = ({text}) => {
     
     return (
         <tr>
-            <td style={{fontWeight: 'bold'}}>Sporting Goods</td>
+            <td style={{ fontWeight: 'bold' }}>{text}</td>
         </tr>
     )
 }
