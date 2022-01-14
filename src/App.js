@@ -1,8 +1,8 @@
-import ProductsTable from './components/ProductsTable'
+import FilterableProductTable from "./components/FilterableProductTable"
 const App = () => {
   return (
     <>
-      <ProductsTable />
+      <FilterableProductTable />
     </>
   )
 }
