@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types'
 
-const ProductRecord = ({ name, price, stocked }) => {
+const ProductRecord = ({ product }) => {
     
     return (
-        <tr style={stocked && {color: 'red'}}>
-            <td>{ name }</td>
-            <td>{ price }</td>
+        <tr style={product.stocked && {color: 'red'}}>
+            <td>{ product.name }</td>
+            <td>{ product.price }</td>
         </tr>
     )
 
