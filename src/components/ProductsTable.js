@@ -8,14 +8,16 @@ const ProductsTable = ({products}) => {
     products.forEach((product) => {
         if (product.category !== lastCategory) {
             rows.push(
-                <ProductCategoryRow text={product.category} />
+                <ProductCategoryRow text={product.category} key={product.category} />
             );
         }
         rows.push(
-            <ProductRecord product={product} />
+            <ProductRecord product={product} key={product.name} />
         )
         lastCategory = product.category;
     });
+
+    console.log(rows);
 
     return (
         <table>
