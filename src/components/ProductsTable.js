@@ -1,22 +1,33 @@
 import ProductRecord from './ProductRecord';
 import ProductCategoryRow from './ProductCategoryRow';
 
-const ProductsTable = () => {
+const ProductsTable = ({products}) => {
+    const rows = [];
+    let lastCategory = null;
+
+    products.forEach((product) => {
+        if (product.category !== lastCategory) {
+            rows.push(
+                <ProductCategoryRow text={product.category} />
+            );
+        }
+        rows.push(
+            <ProductRecord product={product} />
+        )
+        lastCategory = product.category;
+    });
 
     return (
         <table>
-            <tr>
+            <thead>
+              <tr>
                 <th>Name</th>
                 <th>Price</th>
-            </tr>  
-            <ProductCategoryRow text ={'Sporting Goods'} />
-            <ProductRecord name='Football' price='$49.99' />
-            <ProductRecord name='Baseball' price='$9.99' />
-            <ProductRecord name='Basketball' price='$29.99' stocked = {true} />
-            <ProductCategoryRow text ={'Electronics'} />
-            <ProductRecord name='iPod Touch' price='$99.99' />
-            <ProductRecord name='iPhone 5' price='$399.99' stocked = {true} />
-            <ProductRecord name='Nexus 7' price='$199.99'/>
+              </tr>
+            </thead>
+            <tbody>
+                {rows}
+            </tbody>
         </table>
     )
 
