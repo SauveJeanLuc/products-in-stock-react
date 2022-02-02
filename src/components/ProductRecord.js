@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 const ProductRecord = ({ product }) => {
     
     return (
-        <tr style={product.stocked && {color: 'red'}}>
+        <tr style={product.stocked ? {color: 'red'} : {color: 'black'}}>
             <td>{ product.name }</td>
             <td>{ product.price }</td>
         </tr>
