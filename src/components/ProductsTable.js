@@ -17,7 +17,6 @@ const ProductsTable = ({products}) => {
         lastCategory = product.category;
     });
 
-    console.log(rows);
 
     return (
         <table>
