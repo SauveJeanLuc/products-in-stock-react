@@ -1,16 +1,7 @@
 import { useState } from "react";
 
 const SearchBar = ({filterText, inStockOnly}) => {
-    const [handleFilterTextChange, setHandleFilterTextChange] = useState[this.handleFilterTextChange.bind(this)];
-    const [handleInStockChange, setHandleInStockChange] = useState[this.handleInStockChange.bind(this)];
 
-    function handleFilterTextChange(e) {
-        this.props.onFilterTextChange(e.target.value);
-      }
-      
-    function handleInStockChange(e) {
-        this.props.onInStockChange(e.target.checked);
-    }
 
     return (
         <div>
