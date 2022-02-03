@@ -1,11 +1,17 @@
 import ProductRecord from './ProductRecord';
 import ProductCategoryRow from './ProductCategoryRow';
 
-const ProductsTable = ({products}) => {
+const ProductsTable = ({products, filterText, inStockOnly}) => {
     const rows = [];
     let lastCategory = null;
 
     products.forEach((product) => {
+        if (product.name.indexOf(filterText) === -1) {
+            return;
+        }
+        if(inStockOnly && !product.stocked){
+            return;
+        }
         if (product.category !== lastCategory) {
             rows.push(
                 <ProductCategoryRow text={product.category} key={product.category} />
